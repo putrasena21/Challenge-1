@@ -38,7 +38,9 @@ rl.question("\n Pilihan anda : ", (pilihan)=> {
         console.log("2. Kurang(-)");
         console.log("3. Bagi(/)");
         console.log("4. Kali(*)");
-        rl.question("\n Pilih Kalkulator", (kalkulator)=>{
+        console.log("5. Akar");
+        console.log("6. Pangkat")
+        rl.question("\n Pilih Kalkulator : ", (kalkulator)=>{
             console.log(`Anda Memilih Kalkulator ${kalkulator}`);
             rl.question("Masukan Bilangan pertama : ", (jawabanPertama)=> {
               rl.question("Masukan Bilangan kedua : ", (jawabanKedua)=> {
@@ -46,27 +48,35 @@ rl.question("\n Pilihan anda : ", (pilihan)=> {
                 console.log(`Bilangan Pertama Anda ${jawabanPertama}`);
                 console.log(`Bilangan Kedua Anda  ${jawabanKedua}`);
                 console.log("-----------------------------------------");
-                switch(pilihan){
-                  case '1':
-                      console.log(`Hasilnya : ${parseInt(jawabanPertama) + parseInt(jawabanKedua)}`);
-                      break;
+                switch(kalkulator){
+                    case '1':
+                        console.log(`Hasilnya : ${parseInt(jawabanPertama) + parseInt(jawabanKedua)}`);
+                        break;
+            
+                    case '2':
+                        console.log(`Hasilnya : ${parseInt(jawabanPertama) - parseInt(jawabanKedua)}`);
+                        break;
+            
+                    case '3':
+                        console.log(`Hasilnya : ${parseInt(jawabanPertama) * parseInt(jawabanKedua)}`);
+                        break;
+            
+                    case '4':
+                        console.log(`Hasilnya : ${parseInt(jawabanPertama) / parseInt(jawabanKedua)}`);
+                        break;
+
+                    case '5':
+                        console.log(`Hasilnya : ${Math.pow(jawabanPertama, 1/jawabanKedua)}`);
+                        break;
+                    
+                    case '6':
+                        console.log(`Hasilnya : ${Math.pow(jawabanPertama, jawabanKedua)}`);
+                        break;
           
-                  case '2':
-                      console.log(`Hasilnya : ${parseInt(jawabanPertama) - parseInt(jawabanKedua)}`);
-                      break;
-          
-                  case '3':
-                      console.log(`Hasilnya : ${parseInt(jawabanPertama) * parseInt(jawabanKedua)}`);
-                      break;
-          
-                  case '4':
-                      console.log(`Hasilnya : ${parseInt(jawabanPertama) / parseInt(jawabanKedua)}`);
-                      break;
-          
-                  default:
-                      console.log("Pilihan anda tidak tersedia");
-                      rl.close();
-                      break;
+                    default:
+                        console.log("Pilihan anda tidak tersedia");
+                        rl.close();
+                        break;
                 }
                 rl.close();
               });
