@@ -58,11 +58,11 @@ rl.question("\n Pilihan anda : ", (pilihan)=> {
                         break;
             
                     case '3':
-                        console.log(`Hasilnya : ${parseInt(jawabanPertama) * parseInt(jawabanKedua)}`);
+                        console.log(`Hasilnya : ${parseInt(jawabanPertama) / parseInt(jawabanKedua)}`);
                         break;
             
                     case '4':
-                        console.log(`Hasilnya : ${parseInt(jawabanPertama) / parseInt(jawabanKedua)}`);
+                        console.log(`Hasilnya : ${parseInt(jawabanPertama) * parseInt(jawabanKedua)}`);
                         break;
 
                     case '5':
